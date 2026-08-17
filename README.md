@@ -43,3 +43,9 @@ This implementation uses the `+5J` variant instead of `-2J`
 producing negative results on negative operands.  
 
                                                                   END 
+
+
+
+## Program 2: Odd or Even Checker
+
+A simple C program that reads an integer from the user and checks whether it's odd or even by evaluating `number % 2`. Covers basic input handling and conditional statements.
