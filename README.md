@@ -3,7 +3,7 @@ Figuring out C and putting it to the test with mini-projects. ^^
 
 
 
- ## birthday calculator.. 
+ ## program 1 (birthday calculator..)
  A small C program that takes a person's date of birth — with full input
 validation, including leap-year-aware day limits — and calculates the
 day of the week it fell on, using **Zeller's Congruence**.
