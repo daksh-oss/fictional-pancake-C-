@@ -42,10 +42,25 @@ This implementation uses the `+5J` variant instead of `-2J`
 (mathematically equivalent after mod 7) to avoid C's `%` operator
 producing negative results on negative operands.  
 
-                                                                  END 
+                                                                 
 
 
 
 ## Program 2: Odd or Even Checker
 
 A simple C program that reads an integer from the user and checks whether it's odd or even by evaluating `number % 2`. Covers basic input handling and conditional statements.
+
+
+## Program 3: Quadratic Equation Solver
+
+Takes the coefficients `a`, `b`, and `c` of a quadratic equation as input and calculates its roots using the formula `root = (-b ± √(b²-4ac)) / 2a`.
+
+The program first computes the discriminant `D = b² - 4ac` to determine the nature of the roots:
+- `D < 0` → roots are imaginary
+- `D == 0` → roots are real and equal
+- `D > 0` → roots are real and distinct
+
+**What I learned:**
+This program helped me understand the difference between `if`/`else if` branching and using `return 0;` as an early exit. Initially I mixed up the two — I thought `return 0;` inside an `if` block would just skip that block and let the program continue checking the other conditions, similar to how a normal `if`/`else if` chain naturally skips non-matching branches on its own.
+
+I learned that `return 0;` actually **ends the entire program immediately** wherever it's placed — it doesn't move on to check other conditions or run any code after it, even code inside the same function. In this program, it's used inside the `D < 0` branch specifically to stop execution *before* reaching `sqrt(D)`, since taking the square root of a negative number is undefined behavior in C. Without it, the program would still attempt to calculate the roots even when they're imaginary, producing invalid output (`-nan`).
